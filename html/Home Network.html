@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Network Topology</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+
+    #description {
+        width: 80%;
+        max-width: 800px;
+        margin-bottom: 20px;
+        padding: 15px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    #topology {
+        max-width: 90%;
+        height: auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<!-- Static text box -->
+<div id="description" style="font-family: Arial, sans-serif; font-size: 16px; max-width: 600px;">
+  <p>This home network is segmented into three VLANs with separate SSIDs: <strong>Main</strong>, <strong>Guest</strong>, and <strong>IoT</strong>. The network is organized across multiple floors to provide optimal coverage.</p>
+  
+  <p>On the <strong>main floor</strong>, the internet comes in through the <strong>ISP router</strong> in bridge mode, which connects to an <strong>OPNsense router</strong>. The OPNsense router then feeds a <strong>Layer 2 POE switch</strong>, which distributes connections to both wired devices and access points.</p>
+  
+  <p>Connected to the switch:</p>
+  <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.4;">
+    <li>Four desktops</li>
+    <li>One access point on the main floor</li>
+    <li>One access point upstairs</li>
+    <li>One access point downstairs</li>
+  </ul>
+  
+  <p>All access points operate in <em>mesh mode</em>, ensuring seamless wireless coverage throughout the home.</p>
+</div>
+
+
+<!-- Centered PNG image -->
+<img id="topology" src="../images/Home_Network.png" alt="Network Topology">
+
+</body>
+</html>
